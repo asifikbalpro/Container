@@ -17,15 +17,15 @@ class Container2 {
         }
     }
 
-    public Vector<Integer>vector = new Vector<>();
-    public Vector<Integer> getVector() {
+    public static Vector<Integer>vector = new Vector<>();
+    public Vector<Integer> getVector() { // this is the function that i'm not sure about what's happing.
         Vector<Integer>count = new Vector<>();
         for (int i = 0; i < _list.size(); i++){
             int c = _list.elementAt(i);
             if (c >= count.size()){
-                count.ensureCapacity(c+1);
+                count.ensureCapacity(c+1); //this line have problem
             }
-            count.elementAt(c);
+            count.elementAt(c); // this line have problem
         }
         return count;
     }
